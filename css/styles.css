@@ -66,12 +66,16 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background-image: url(../images/vancouver_skyline.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .clock {
-  width: 500px;
-  height: 500px;
   border-radius: 50%;
+  width: 400px;
+  height: 400px;
   position: relative;
   font-size: 1.5rem;
 }
@@ -81,6 +85,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  height: 500px;
+  width: 500px;
 }
 
 .clock .number {
