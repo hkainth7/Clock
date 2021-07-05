@@ -71,6 +71,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
 }
 
 .clock {
@@ -97,8 +98,8 @@ body {
   text-align: center;
   transform: rotate(var(--rotation));
   color: white;
-  font-size: 2.25rem;
-  font-style: 700;
+  font-size: 2.15rem;
+  font-style: 800;
 }
 
 .clock .number1 {
@@ -152,7 +153,7 @@ body {
   bottom: 50%;
   left: 50%;
   transform-origin: bottom;
-  box-shadow: 0 0 5px whitesmoke;
+  box-shadow: 0 0 5px 0 white;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   z-index: 10;
@@ -162,7 +163,7 @@ body {
 .clock::after {
   content: '';
   position: absolute;
-  background-color: black;
+  background-color: #ccc;
   height: 25px;
   width: 25px;
   top: 50%;
@@ -181,11 +182,53 @@ body {
 .clock .hand.minute {
   width: 5px;
   height: 35%;
-  background-color: black;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .clock .hand.hour {
   width: 7px;
   height: 25%;
-  background-color: black;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input[type="checkbox"]:focus {
+  outline: 0;
+}
+
+.toggle {
+  position: absolute;
+  top: 5%;
+  left: 85%;
+  width: 52px;
+  height: 32px;
+  border-radius: 16px;
+  border: 2px solid #474755;
+  background: linear-gradient(180deg, #2D2F39 0%, #1F2027 100%);
+  transition: all 0.2s ease-in-out;
+}
+
+.toggle::after {
+  content: " ";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background-color: white;
+  transition: all 0.2s cubic-bezier(0.5, 0.1, 0.75, 1.35);
+}
+
+.toggle:checked {
+  border-color: #ccc;
+}
+
+.toggle:checked::after {
+  transform: translatex(20px);
 }
