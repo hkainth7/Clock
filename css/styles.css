@@ -65,6 +65,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'lato', sans-serif;
   min-height: 100vh;
   background-image: url(../images/vancouver_skyline.jpg);
   background-position: center;
@@ -77,7 +78,6 @@ body {
   width: 400px;
   height: 400px;
   position: relative;
-  font-size: 1.5rem;
 }
 
 .clock img {
@@ -96,6 +96,9 @@ body {
   height: 100%;
   text-align: center;
   transform: rotate(var(--rotation));
+  color: white;
+  font-size: 2.25rem;
+  font-style: 700;
 }
 
 .clock .number1 {
@@ -149,7 +152,7 @@ body {
   bottom: 50%;
   left: 50%;
   transform-origin: bottom;
-  border: 1px solid white;
+  box-shadow: 0px 0px 5px white;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   z-index: 10;
@@ -171,18 +174,18 @@ body {
 
 .clock .hand.second {
   width: 3px;
-  height: 45%;
+  height: 40%;
   background-color: red;
 }
 
 .clock .hand.minute {
-  width: 7px;
-  height: 40%;
+  width: 5px;
+  height: 35%;
   background-color: black;
 }
 
 .clock .hand.hour {
-  width: 10px;
-  height: 35%;
+  width: 7px;
+  height: 25%;
   background-color: black;
 }
